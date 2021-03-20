@@ -1,1 +1,69 @@
-~/ $ mkdir ~/pset1/mario
+; ask for height
+height = -1
+while not 1 <= height <= 8 {
+  write "Height: "
+  height = scan
+}
+
+for i = 0..8 {
+  ; spaties
+  for j = 0..8-1-i {
+    put ' '
+  }
+  
+  ; hekjes
+  for j = 0+1..i {
+    put '#'
+  }
+  
+  ; volgende regel
+  put 10
+}
+
+$ make
+
+; Part 2
+; ask for height
+height = -1
+while not 1 <= height <= 8 {
+  write "Height: "
+  height = scan
+}
+
+for i = 0..8 {
+
+  ; hekjes
+  for j = 0+1..i {
+    put '#'
+  }
+  
+    ; spaties
+  for j = 0..8-1-i {
+    put ' '
+  }
+  
+  ; volgende regel
+  put 10
+}
+
+$ make
+
+; part 3
+for i = 0..8 {
+  ; spaties
+  for j = 0..8-1-i {
+    put '.'
+  }
+  
+  ; hekjes
+  for j = 0+1..i {
+    put '#'
+  }
+  
+  ; volgende regel
+  put 10
+}
+
+$ make
+;check50 cs50/problems/2021/x/mario/less
+;style50 mario.c
